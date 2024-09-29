@@ -37,6 +37,7 @@ if settings.MODE == "TEST":
     db_helper = DatabaseHelper(
         url=str(settings.TEST_DB_URL)
     )
+
 else:
     db_helper = DatabaseHelper(
         url=str(settings.DB_URL)
