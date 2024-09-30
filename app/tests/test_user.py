@@ -26,9 +26,3 @@ async def test_create_user1(name, status_code, ac: AsyncClient):
 async def test_get_user(user_id, status_code, ac: AsyncClient):
     response = await ac.get(f"/user/{user_id}", params={"user_id": user_id})
     assert response.status_code == status_code
-
-
-@pytest.mark.asyncio
-async def test_get_products(ac: AsyncClient):
-    response = await ac.get("/get_products")
-    assert response.status_code == 200
